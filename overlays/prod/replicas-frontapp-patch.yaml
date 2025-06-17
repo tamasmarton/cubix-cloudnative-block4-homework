@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      homework: frontapp
+      training: block4
+  template:
+    metadata:
+      labels:
+        homework: frontapp
+        training: block4

@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      homework: backapp
+      training: block4
+  template:
+    metadata:
+      labels:
+        homework: backapp
+        training: block4
