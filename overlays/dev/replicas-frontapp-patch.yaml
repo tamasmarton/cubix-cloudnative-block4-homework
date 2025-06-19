@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: frontapp
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       homework: frontapp
