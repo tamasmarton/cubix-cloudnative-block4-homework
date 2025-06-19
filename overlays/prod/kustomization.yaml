@@ -2,6 +2,7 @@ namespace: hw4-prod
 
 resources:
   - ../../base
+  - ingress.yaml
 
 patches:
   - path: replicas-frontapp-patch.yaml
@@ -16,9 +17,3 @@ patches:
       version: v1
       kind: Deployment
       name: backapp
-  - path: ingress-patch.yaml
-    target:
-      group: networking.k8s.io
-      version: v1
-      kind: Ingress
-      name: frontapp-ingress
